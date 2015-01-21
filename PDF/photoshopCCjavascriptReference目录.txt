@@ -1,4 +1,4 @@
-﻿1 Introduction  32
+1 Introduction  32
 JavaScript support in Adobe Photoshop CC 2014 ......................32
 Executing scripts .....................................33
 Installing scripts ................................33
@@ -172,9 +172,186 @@ stringIDToTypeID............................50
 togglePalettes..................................50
 typeIDToCharID...............................50
 typeIDToStringID ............................50
+=======
+﻿1引言...................32
+在Adobe Photoshop CC2014年JavaScript支持......................32
+执行脚本..........33
+安装脚本.....33
+执行其他脚本...............33
+启动脚本...............33
+对象模型的使用和命名........34
+2 JavaScript对象参考................35
+对象描述............35
+属性符号.....35
+displayDialogs.......35
+方法符号........35
+作物...........36
+ActionDescriptor37
+属性........37
+算上........37
+类型名称...............37
+方法..........37
+明确..........37
+擦除.........37
+fromStream............37
+getBoolean.............37
+的getClass... 37
+的getData....37
+getDouble..............37
+getEnumerationType................37
+getEnumerationValue...............37
+getInteger...............37
+getKey......37
+getLargeInteger... 38
+的GetList......38
+getObjectType......38
+getObjectValue.....38
+getPath....38
+getReference.........38
+的getString0.38
+的getType... 38
+getUnitDoubleType...................38
+getUnitDoubleValue..................38
+hasKey......38
+的isEqual......38
+putBoolean............38
+putClass... 38
+putData... 38
+putDouble..............38Adobe的Photoshop CC2014年
+JavaScript的脚本参考4
+putEnumerated....38
+putInteger..............39
+putLargeInteger... 39
+putList......39
+putObject39
+putPath....39
+putReference.........39
+putString.39
+putUnitDouble......39
+toStream0.39
+行为列表...............40
+属性........40
+算上........40
+类型名称...............40
+方法..........40
+明确..........40
+getBoolean.............40
+的getClass... 40
+的getData....40
+getDouble..............40
+getEnumerationType................40
+getEnumerationValue...............40
+getInteger...............40
+getLargeInteger...41
+的GetList......41
+getObjectType......41
+getObjectValue.....41
+getPath....41
+getReference.........41
+的getString0.41
+的getType...41
+getUnitDoubleType...................41
+getUnitDoubleValue..................41
+putBoolean............41
+putClass...41
+putData...41
+putDouble..............41
+putEnumerated....41
+putInteger..............41
+putLargeInteger...41
+putList......41
+putObject42
+putPath....42
+putReference.........42
+putString.42
+putUnitDouble......42
+ActionReference0.43
+属性........43
+类型名称...............43
+方法..........43
+getContainer.........43Adobe的Photoshop CC2014年
+JavaScript的脚本参考5
+getDesiredClass....43
+getEnumeratedType..................43
+getEnumeratedValue................43
+getForm...43
+则getIdentifier...........43
+getIndex..43
+的getName0.43
+0.43的getOffset
+............的getProperty43
+putClass... 44
+putEnumerated....44
+putIdentifier...........44
+putIndex..44
+putName.44
+putOffset.44
+putProperty............44
+应用...........45
+属性........45
+...的ActiveDocument45
+backgroundColor.45
+打造..........45
+colorSettings.........45
+displayDialogs.......45
+文件.............45
+字体..........45
+foregroundColor..45
+freeMemory...........45
+区域........46
+macintoshFileTypes...................46
+measurementLog46
+名字.........46
+通知者... 46
+notifiersEnabled... 46
+路径...........46
+playbackDisplayDialogs...........46
+playbackParameters..................46
+喜好............46
+preferencesFolder......................46
+recentFiles..............46
+scriptingBuildDate.....................46
+scriptingVersion... 46
+systemInformation.....................46
+类型名称...............46
+版本.....47
+windowsFileTypes......................47
+方法..........47
+一批........47
+哔..........47
+bringToFront.........47
+charIDToTypeID....47
+doAction.47Adobe的Photoshop CC2014年
+JavaScript的脚本参考6
+eraseCustomOptions.................47
+executeAction.......47
+executeActionGet47
+featureEnabled.....47
+getCustomOptions.....................48
+isQuicktimeAvailable.................48
+负载...........48
+makeContactSheet.....................48
+makePDFPresentation..............48
+makePhotoGallery......................48
+makePhotomerge48
+makePicturePackage.................48
+开.........49
+openDialog............49
+净化........49
+putCustomOptions....................49
+刷新......49
+refreshFonts...........49
+runMenuItem........49
+showColorPicker..50
+stringIDToTypeID.50
+togglePalettes.......50
+typeIDToCharID....50
+typeIDToStringID0.50
+>>>>>>> 0dfbe604c7cfde1c77514eb14f94d4cbdbaae1db
 ArtLayer..................53
-Properties........53
+属性........53
 allLocked.53
+<<<<<<< HEAD
 blendMode........................................53
 bounds.....53
 boundsNoEffects ............................53
@@ -267,10 +444,105 @@ resize ........62
 rotate........62
 selectiveColor...................................62
 shadowHighlight ............................62
+=======
+.............将对blendMode53
+界.....53
+boundsNoEffects0.53
+fillOpacity53
+filterMaskDensity0.53
+filterMaskFeather.53
+分组..53
+isBackgroundLayer.....................53
+那种...........53
+layerMaskDensity.54
+layerMaskFeather54
+linkedLayers...........54
+名字.........54
+不透明.....54
+父母.......54
+pixelsLocked..........54
+positionLocked.....54
+textItem...54
+transparentPixelsLocked..........54
+类型名称...............54
+vectorMaskDensity.....................54
+vectorMaskFeather....................54
+可见.......54
+xmpMetadata........54Adobe的Photoshop CC2014年
+JavaScript的脚本参考7
+方法..........55
+adjustBrightnessContrast........55
+adjustColorBalance....................55
+adjustCurves..........55
+adjustLevels...........55
+applyAddNoise.....55
+applyAverage........55
+applyBlur.55
+applyBlurMore......55
+applyClouds...........55
+applyCustomFilter......................55
+applyDeInterlace..56
+applyDespeckle....56
+applyDifferenceClouds.............56
+applyDiffuseGlow56
+applyDisplace........56
+applyDustAndScratches...........56
+applyGaussianBlur......................56
+applyGlassEffect...56
+applyHighPass......56
+applyLensBlur.......57
+applyLensFlare......57
+applyMaximum....57
+applyMedianNoise.....................57
+applyMinimum.....58
+applyMotionBlur..58
+applyNTSC..............58
+applyOceanRipple......................58
+applyOffset.............58
+applyPinch.............58
+applyPolarCoordinates.............58
+applyRadialBlur....58
+applyRipple............58
+applySharpen........58
+applySharpenEdges...................58
+applySharpenMore....................58
+applyShear.............58
+applySmartBlur.....59
+applySpherize.......59
+applyStyle...............59
+applyTextureFill....59
+applyTwirl...............59
+applyUnSharpMask....................59
+applyWave..............59
+applyZigZag...........59
+autoContrast..........59
+autoLevels..............59
+明确..........59
+副本..........60
+切..............60
+饱和度..............60Adobe的Photoshop CC2014年
+JavaScript的脚本参考8
+duplicate.60
+平衡... 60
+反转........60
+链接.............60
+合并.......60
+mixChannels..........61
+移动.........61
+photoFilter.............61
+色调分离0.61
+光栅化...61
+删除.....61
+调整........62
+旋转........62
+可选颜色........62
+shadowHighlight0.62
+>>>>>>> 0dfbe604c7cfde1c77514eb14f94d4cbdbaae1db
 threshold.62
-translate ..62
-unlink .......62
+翻译..62
+取消链接.......62
 ArtLayers................65
+<<<<<<< HEAD
 Properties........65
 length.......65
 parent.......65
@@ -366,11 +638,109 @@ Methods ..........74
 add ............74
 getByName .......................................74
 removeAll 74
+=======
+属性........65
+长度65.......
+父母.......65
+类型名称...............65
+方法..........65
+添加............65
+GetByName方法............65
+...............的removeAll65
+BatchOptions.......66
+属性........66
+目的地.............66
+destinationFolder66
+错误文件... 66
+文件命名..............66
+macintoshCompatible..............66
+overrideOpen........66
+overrideSave..........66
+startingSerial.........66
+suppressOpen.......66
+suppressProfile.....67
+类型名称...............67
+unixCompatible....67
+windowsCompatible.................67
+BitmapConversionOptions....................68
+属性........68
+角.........68
+frequency68
+方法....68
+patternName.........68
+resolution68
+塑造........68
+类型名...............68Adobe的Photoshop CC2014年
+JavaScript的脚本参考9
+BMPSaveOptions69
+属性........69
+alphaChannels......69
+深入........69
+flipRowOrder.........69
+OSTYPE......69
+rleCompression....69
+类型名称...............69
+CameraRAWOpenOptions.....................70
+属性........70
+bitsPerChannel.....70
+blueHue... 70
+blueSaturation......70
+亮度...............70
+chromaticAberrationBY............70
+chromaticAberrationRC............70
+colorNoiseReduction.................70
+色彩..............70
+对比... 70
+曝光0.70
+greenHue70
+greenSaturation... 70
+luminanceSmoothing...............70
+redHue.....70
+redSaturation........70
+resolution70
+饱和...............70
+设置....70
+阴影..70
+shadowTint............70
+sharpness70
+尺寸............70
+温度...........70
+色调.............71
+类型名称...............71
+vignettingAmount.....................71
+vignettingMidpoint...................71
+最大光圈.........71
+通道..................72
+属性........72
+颜色..........72
+直方图...............72
+那种...........72
+名字.........72
+不透明.....72
+父母.......72
+类型名称...............72
+可见.......72
+方法..........72
+duplicate.72
+合并.......73Adobe的Photoshop CC2014年
+JavaScript的脚本参考10
+删除.....73
+渠道................74
+属性........74
+长度74.......
+父母.......74
+类型名称...............74
+方法..........74
+添加............74
+GetByName方法............74
+...............的removeAll74
+>>>>>>> 0dfbe604c7cfde1c77514eb14f94d4cbdbaae1db
 CMYKColor............79
-Properties........79
-black .........79
-cyan...........79
+属性........79
+黑色.........79
+青色...........79
 magenta..79
+<<<<<<< HEAD
 typename 79
 yellow.......79
 ColorSampler .......80
@@ -494,9 +864,135 @@ pathItems 89
 pixelAspectRatio .............................89
 printSettings.....................................89
 quickMaskMode..............................90
+=======
+类型名称...............79
+黄.......79
+ColorSampler.......80
+属性........80
+颜色..........80
+位置... 80
+父母.......80
+类型名称...............80
+方法..........80
+移动.........80
+删除.....80
+ColorSamplers.....81
+属性........81
+长度81.......
+父母.......81
+类型名称...............81
+方法..........81
+添加............81
+...............的removeAll81
+ContactSheetOptions.......82
+属性........82
+acrossFirst...............82
+BESTFIT......82
+标题.....82
+列数........82
+扁平.......82
+字体............82
+fontSize的....82
+高度.......82
+水平...............82
+模式........82
+resolution82
+rowCount82
+类型名称...............82
+useAutoSpacing...82
+垂直.....82Adobe的Photoshop CC2014年
+JavaScript的脚本参考11
+宽度........82
+CountItem.............83
+属性........83
+位置...83
+父母.......83
+类型名称...............83
+方法..........83
+删除.....83
+CountItems...........84
+属性........84
+长度84.......
+父母.......84
+类型名称...............84
+方法..........84
+添加............84
+GetByName方法............84
+...............的removeAll84
+DCS1_SaveOptions............85
+属性........85
+DCS的............85
+embedColorProfile.....................85
+encoding.85
+halftoneScreen.....85
+插值..........85
+预览....85
+transferFunction... 85
+类型名称...............85
+vectorData..............85
+DCS2_SaveOptions............86
+属性........86
+DCS的............86
+embedColorProfile.....................86
+encoding.86
+halftoneScreen.....86
+插值..........86
+multiFileDCS..........86
+预览....86
+spotColors..............86
+transferFunction... 86
+类型名称...............86
+vectorData..............86
+DICOMOpenOptions.........87
+属性........87
+匿名..............87
+列...87
+反向.....87
+行..........87
+showOverlays........87
+类型名称...............87
+windowLevel.........87
+WINDOWWIDTH.......87Adobe的Photoshop CC2014年
+JavaScript的脚本参考12
+文档.............88
+属性........88
+activeChannels.....88
+activeHistoryBrushSource.......88
+activeHistoryState......................88
+activeLayer.............88
+artLayers..88
+backgroundLayer.88
+bitsPerChannel.....88
+channels..88
+colorProfileName.88
+colorProfileType...88
+colorSamplers.......88
+componentChannels.................88
+countItems.............89
+fullName..89
+导游......89
+高度.......89
+直方图...............89
+historyStates..........89
+信息............89
+layerComps............89
+层........89
+layerSets..89
+managed.89
+measurementScale....................89
+模式........89
+名字.........89
+父母.......89
+路径...........89
+pathItems...............89
+pixelAspectRatio..89
+printSettings..........89
+quickMaskMode... 90
+>>>>>>> 0dfbe604c7cfde1c77514eb14f94d4cbdbaae1db
 resolution90
-saved ........90
+保存........90
 selection..90
+<<<<<<< HEAD
 typename 90
 width ........90
 xmpMetadata...................................90
