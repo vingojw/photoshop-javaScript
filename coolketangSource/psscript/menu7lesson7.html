@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Photoshop脚本 > 云彩滤镜的使用</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="robots" content="all">
+<meta name="author" content="http://weibo.com/tapinfinity">
+<meta name="keywords" content="photoshop,photoshop脚本,ps,ps脚本,photoshop教程,ps教程,photoshop视频,ps视频,photoshop动作,ps动作,photoshop批处理,ps批处理" />
+<meta name="description" content="本站是全球唯一一个向您详细讲解Photoshop脚本的站点。本站超酷的教程帮助您快速上手Photohsop脚本！学会Photoshop脚本，可以大幅度提高您的工作效率！" />
+<link rel="stylesheet" type="text/css" href="../source/css.css">
+<script>
+	window.onscroll = function()
+	{ 
+		var t = document.documentElement.scrollTop || document.body.scrollTop;  
+		
+		if( t >= 62 ) 
+		{ 
+			//alert(t);
+			if(document.getElementById("topMenuFloat"))
+			{
+				document.getElementById("topMenuFloat").style.top = t +"px";
+			}
+			else
+			{
+				var newNode = document.getElementById("topMenu").cloneNode(true);
+				newNode.id = "topMenuFloat";
+				document.body.appendChild(newNode);
+				newNode.style.position = "absolute";
+				newNode.style.top = t +"px";
+			}
+			//document.getElementById("topMenu").style.display="block";
+			//document.getElementById("topMenu").style.top = t +"px";
+		} 
+		else 
+		{ 
+			if(document.getElementById("topMenuFloat"))
+			{
+				document.getElementById("topMenuFloat").parentNode.removeChild(document.getElementById("topMenuFloat"));
+			}
+		} 
+
+		if( t >= (152-50) ) 
+		{
+			if(document.getElementById("leftMenuFloat"))
+			{
+				document.getElementById("leftMenuFloat").style.top = t + 50 +"px";
+			}
+			else
+			{
+				var newNode = document.getElementById("leftPart").cloneNode(true);
+				
+				newNode.id = "leftMenuFloat";
+				document.body.appendChild(newNode);
+
+				var arr = document.getElementById('leftMenuFloat').childNodes;
+				for(var i=0; i<arr.length; i++)
+				{
+					if(arr[i].id == "leftMenuAdPart")
+					{
+						arr[i].parentNode.removeChild(arr[i]);
+						break;
+					}
+				}
+				newNode.style.position = "absolute";
+				newNode.style.top = t + 50 +"px";
+				newNode.style.left = document.getElementById("leftPart").offsetLeft + "px";
+			}
+		}
+		else
+		{
+			if(document.getElementById("leftMenuFloat"))
+			{
+				document.getElementById("leftMenuFloat").parentNode.removeChild(document.getElementById("leftMenuFloat"));
+			}
+		}
+	} 
+	
+	function closeAd(obj)
+	{
+		obj.parentNode.parentNode.removeChild(obj.parentNode);
+	}
+</script>	</head>
+
+	<body>
+		<div class="divHead">
+	<div class="divHeadContent">
+		<div class="divHeadContentLogo"><a href="/"><img href="/" src="../images/logo.png"/></a></div>
+		<div class="divHeadContentRight"><a href="http://weibo.com/tapinfinity" target="_blank"><img src="../images/sina.png"/></a></div>
+
+	</div>
+</div>
+<div class="divHeadSplitter">&nbsp;</div>
+<div id="topMenu" class="divHeadMenu">
+	<div class="divHeadMenuContent">
+		<a href="menu1lesson1.html">初识Ps脚本</a>
+		<a href="menu2lesson1.html">文档操作</a>
+		<a href="menu3lesson1.html">图像处理</a>
+		<a href="menu4lesson1.html">使用图层</a>
+		<a href="menu5lesson1.html">使用选区</a>
+		<a href="menu6lesson1.html">通道基础</a>
+		<a href="menu7lesson1.html">神奇滤镜</a>
+		<a href="menu8lesson1.html">综合实例</a>
+		<a href="menu9lesson1.html">JS脚本入门</a>
+	</div>
+</div>
+
+<div class="divMenuPath">
+	<div id="pageTitle" class="divMenuPathContent">
+		首页 > 
+	</div>
+</div>
+<script>
+//document.getElementById('contentTitle').innerHTML = document.title;
+
+var topMenu = document.getElementById('topMenu');
+var topMenuAs = topMenu.getElementsByTagName('a');
+for(var i=0; i<topMenuAs.length; i++)
+{
+	topMenuAs[i].className = ''; 
+}
+
+var mainTitle = "";
+var url = window.location.href;
+if(url.indexOf('menu1lesson') > -1)
+{
+	topMenuAs[0].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu1lesson1.html'>初识Ps脚本</a>";
+}
+else if(url.indexOf('menu2lesson') > -1)
+{
+	topMenuAs[1].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu2lesson1.html'>文档操作</a>";
+}
+else if(url.indexOf('menu3lesson') > -1)
+{
+	topMenuAs[2].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu3lesson1.html'>图像处理</a>";
+}
+else if(url.indexOf('menu4lesson') > -1)
+{
+	topMenuAs[3].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu4lesson1.html'>使用图层</a>";
+}
+else if(url.indexOf('menu5lesson') > -1)
+{
+	topMenuAs[4].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu5lesson1.html'>使用选区</a>";
+}
+else if(url.indexOf('menu6lesson') > -1)
+{
+	topMenuAs[5].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu6lesson1.html'>通道基础</a>";
+}
+else if(url.indexOf('menu7lesson') > -1)
+{
+	topMenuAs[6].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu7lesson1.html'>神奇滤镜</a>";
+}
+else if(url.indexOf('menu8lesson') > -1)
+{
+	topMenuAs[7].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu8lesson1.html'>综合实例</a>";
+}
+else if(url.indexOf('menu9lesson') > -1)
+{
+	topMenuAs[8].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu9lesson1.html'>JS脚本入门</a>";
+}
+
+document.getElementById('pageTitle').innerHTML = '<a href="/">首页</a> > '+mainTitle+' > ' + document.title.split(' > ')[1];
+</script>		<div class="divBody">
+			<div class="divBodyContent">
+				<div id="leftPart" class="divBodyContentLeft">
+					<div id="leftMenu" class="menu">
+		<p class="title">神奇滤镜</p>
+	<p>
+		<a href="menu7lesson1.html" title="模糊滤镜的使用">模糊滤镜的使用</a><br/>
+		<a href="menu7lesson2.html" title="高斯模糊滤镜的使用">高斯模糊滤镜的使用</a><br/>
+		<a href="menu7lesson3.html" title="运动模糊滤镜的使用">运动模糊滤镜的使用</a><br/>
+		<a href="menu7lesson4.html" title="锐化滤镜的使用">锐化滤镜的使用</a><br/>
+		<a href="menu7lesson5.html" title="给图片添加噪点">给图片添加噪点</a><br/>
+		<a href="menu7lesson6.html" title="蒙尘与划痕滤镜的使用">蒙尘与划痕滤镜的使用</a><br/>
+		<a href="menu7lesson7.html" title="云彩滤镜的使用">云彩滤镜的使用</a><br/>
+		<a href="menu7lesson8.html" title="镜头光晕滤镜的使用">镜头光晕滤镜的使用</a><br/>
+		<a href="menu7lesson9.html" title="扩散亮光滤镜的使用">扩散亮光滤镜的使用</a><br/>
+		<a href="menu7lesson10.html" title="去斑滤镜的使用">去斑滤镜的使用</a><br/>
+		<a href="menu7lesson11.html" title="高反差保留滤镜的使用">高反差保留滤镜的使用</a><br/>
+		<a href="menu7lesson12.html" title="海洋波纹滤镜的使用">海洋波纹滤镜的使用</a><br/>
+		<a href="menu7lesson13.html" title="挤压滤镜的使用">挤压滤镜的使用</a><br/>
+		<a href="menu7lesson14.html" title="最大化滤镜的使用">最大化滤镜的使用</a><br/>
+		<a href="menu7lesson15.html" title="最小化滤镜的使用">最小化滤镜的使用</a><br/>
+		<a href="menu7lesson16.html" title="极坐标滤镜的使用">极坐标滤镜的使用</a><br/>
+	</p>
+	</div>
+
+<div id="leftMenuAdPart">
+		<div class="leftSplitter"></div>
+	<div class="myAd">
+		<div class="divIcon">
+			<a href="https://itunes.apple.com/cn/app/hu-dong-jiao-cheng-for-photoshop/id680139052?mt=8" class="productsLogo" target="_blank">
+				<img src="../images/IconPs.png"/>
+			</a>
+		</div>
+		<div class="divTitle">
+			<a href="https://itunes.apple.com/cn/app/hu-dong-jiao-cheng-for-photoshop/id680139052?mt=8" class="products" target="_blank">
+				<span>指尖上的</span><br/>
+				<span>Photoshop互动教程</span>
+			</a>
+		</div>
+		<div class="divDescription">
+			<span>利用手指互动式学习Photoshop</span>
+		</div>
+	</div>
+
+	<div class="leftSplitter"></div>
+	<div class="myAd">
+		<div class="divIcon">
+			<a href="https://itunes.apple.com/cn/app/hu-dong-jiao-cheng-for-xcode5/id838877136?mt=8" class="productsLogo" target="_blank">
+				<img src="../images/IconXcode.png"/>
+			</a>
+		</div>
+		<div class="divTitle">
+			<a href="https://itunes.apple.com/cn/app/hu-dong-jiao-cheng-for-xcode5/id838877136?mt=8" class="products" target="_blank">
+				<span>指尖上的</span><br/>
+				<span>Xcode教程 & OC</span>
+			</a>
+		</div>
+		<div class="divDescription">
+			<span>利用手指互动式学习iOS开发利器</span>
+		</div>
+	</div>
+
+	<div class="leftSplitter"></div>
+	<div class="myAd">
+		<div class="divIcon">
+			<a href="https://itunes.apple.com/cn/app/zhi-jian-shang-jiao-cheng/id918924521?mt=8" class="productsLogo" target="_blank">
+				<img src="../images/IconPages.png"/>
+			</a>
+		</div>
+		<div class="divTitle">
+			<a href="https://itunes.apple.com/cn/app/zhi-jian-shang-jiao-cheng/id918924521?mt=8" class="products" target="_blank">
+				<span>指尖上的</span><br/>
+				<span>Pages互动教程</span>
+			</a>
+		</div>
+		<div class="divDescription">
+			<span>利用手指互动式学习Mac办公神器</span>
+		</div>
+	</div>
+	</div>
+<script>
+//document.getElementById('contentTitle').innerHTML = document.title;
+
+var container = document.getElementById('leftMenu');
+var links = container.getElementsByTagName('a');
+
+for(var i=0; i<links.length;i++)
+{
+	if(links[i].innerText == document.title.split(' > ')[1])
+	{
+		links[i].setAttribute("class","currentLink");
+		break;
+	}
+}
+</script>				</div>
+
+				<!--内容开始-->
+				<div class="divBodyContentRight">
+					<div class="content">
+						<div><div class="contentTitle"><h2 id="articleTitle">云彩滤镜的使用</h2></div><div class="contentShare"><!-- JiaThis Button BEGIN -->
+<div class="jiathis_style" style="margin-top:26px;">
+<span class="jiathis_txt">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a class="jiathis_button_kaixin001"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var at = document.getElementById('articleTitle').innerText;
+
+var jiathis_config={
+	url:window.location.href,
+	summary:"推荐大家一个很棒的【Photoshop脚本】教程网站：http://coolketang.com/。我正在这里学习Ps脚本，这里的课程不仅通俗易懂地讲解了Ps脚本的所有知识点，而且还有大量的Ps脚本综合实例！",
+	title:"#酷课堂Photoshop脚本 - "+at+"#",
+	shortUrl:false,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END --></div></div>
+						<hr/><div class="adCloseButtonContainer"><div class="adCloseButton" onclick="closeAd(this)">X</div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+	 style="display:inline-block;width:728px;height:90px"
+	 data-ad-client="ca-pub-5984872709769590"
+	 data-ad-slot="7163282668"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+						<div>
+							<p>本节将演示如何使用脚本，调用系统的[云彩滤镜]。首先创建一个空白的脚本文档，并保存在硬盘上某个位置。</p>
+					<p>首先创建一个空白的脚本文档，并保存在硬盘上某个位置。</p>
+					<p>接着输入脚本代码：</p>
+<pre>//[云彩滤镜]是根据前景色和背景色来模拟生成的。在此将前景色设为蓝色，背景色设为白色。
+//设置系统的前景色RGB值的red值。
+app.foregroundColor.rgb.red = 0;
+
+//设置系统的前景色RGB值的green值。
+app.foregroundColor.rgb.green = 125;
+
+//设置系统的前景色RGB值的blue值。
+app.foregroundColor.rgb.blue = 255;
+
+//设置系统的背景色RGB值的red值。
+app.backgroundColor.rgb.red = 255;
+
+//设置系统的背景色RGB值的green值。
+app.backgroundColor.rgb.green = 255;
+
+//设置系统的背景色RGB值的blue值。
+app.backgroundColor.rgb.blue = 255;
+
+//定义一个变量[layer]，用来表示Photoshop的当前图层。
+var layer = app.activeDocument.activeLayer;
+
+//调用[layer]对象的[applyClouds]方法，给图层添加云彩滤镜效果。
+layer.applyClouds();
+</pre>
+					<p><img src="../screens/menu7lesson7_10.png" width="760px"/></p>
+					<p>我们的脚本已经编写完成，把它保存下来。</p>
+					<p>然后切换到Photoshop。当然Photoshop拥有一个新建的文档。</p>
+					<p><img src="../screens/menu7lesson7_16.png" width="760px"/></p>
+					<p>接着依次点击[文件] > [脚本] > [浏览]，打开刚刚保存的脚本文件。</p>
+					<p><img src="../screens/menu7lesson7_17.png" width="760px"/></p>
+					<p>在弹出的[载入]窗口中，直接双击脚本名称，Photoshop将直接调用并执行该脚本。</p>
+					<p>下图为执行完脚本后的图像。</p>
+					<p><img src="../screens/menu7lesson7_18.png" width="760px"/></p>
+							<p></p>
+
+						</div>
+					</div>
+				</div>
+				<!--内容结束-->
+			</div>
+		</div>
+		
+		<!--底部开始-->
+		<div class="divFoot">
+	<div class="divFootContent">
+		<br/>
+		酷课堂 提供的内容仅用于培训。我们不保证内容的正确性。
+		通过使用本站内容随之而来的风险与本站无关。
+		酷课堂简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+		当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+		版权所有，保留一切权利。 
+		<br/>赞助商：<a href="http://weibo.com/tapinfinity" target="_blank">TapInfinity</a>
+		<br/>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253561512'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.html%3Fid%3D1253561512%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+
+	</div>
+</div>		<!--底部结束-->
+
+	</body>
+</html>

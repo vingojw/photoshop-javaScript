@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Photoshop½Å±¾ > ±éÀúÎÄµµµÄËùÓĞÍ¨µÀ</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="robots" content="all">
+<meta name="author" content="http://weibo.com/tapinfinity">
+<meta name="keywords" content="photoshop,photoshopè„šæœ¬,ps,psè„šæœ¬,photoshopæ•™ç¨‹,psæ•™ç¨‹,photoshopè§†é¢‘,psè§†é¢‘,photoshopåŠ¨ä½œ,psåŠ¨ä½œ,photoshopæ‰¹å¤„ç†,psæ‰¹å¤„ç†" />
+<meta name="description" content="æœ¬ç«™æ˜¯å…¨çƒå”¯ä¸€ä¸€ä¸ªå‘æ‚¨è¯¦ç»†è®²è§£Photoshopè„šæœ¬çš„ç«™ç‚¹ã€‚æœ¬ç«™è¶…é…·çš„æ•™ç¨‹å¸®åŠ©æ‚¨å¿«é€Ÿä¸Šæ‰‹Photohsopè„šæœ¬ï¼å­¦ä¼šPhotoshopè„šæœ¬ï¼Œå¯ä»¥å¤§å¹…åº¦æé«˜æ‚¨çš„å·¥ä½œæ•ˆç‡ï¼" />
+<link rel="stylesheet" type="text/css" href="../source/css.css">
+<script>
+	window.onscroll = function()
+	{ 
+		var t = document.documentElement.scrollTop || document.body.scrollTop;  
+		
+		if( t >= 62 ) 
+		{ 
+			//alert(t);
+			if(document.getElementById("topMenuFloat"))
+			{
+				document.getElementById("topMenuFloat").style.top = t +"px";
+			}
+			else
+			{
+				var newNode = document.getElementById("topMenu").cloneNode(true);
+				newNode.id = "topMenuFloat";
+				document.body.appendChild(newNode);
+				newNode.style.position = "absolute";
+				newNode.style.top = t +"px";
+			}
+			//document.getElementById("topMenu").style.display="block";
+			//document.getElementById("topMenu").style.top = t +"px";
+		} 
+		else 
+		{ 
+			if(document.getElementById("topMenuFloat"))
+			{
+				document.getElementById("topMenuFloat").parentNode.removeChild(document.getElementById("topMenuFloat"));
+			}
+		} 
+
+		if( t >= (152-50) ) 
+		{
+			if(document.getElementById("leftMenuFloat"))
+			{
+				document.getElementById("leftMenuFloat").style.top = t + 50 +"px";
+			}
+			else
+			{
+				var newNode = document.getElementById("leftPart").cloneNode(true);
+				
+				newNode.id = "leftMenuFloat";
+				document.body.appendChild(newNode);
+
+				var arr = document.getElementById('leftMenuFloat').childNodes;
+				for(var i=0; i<arr.length; i++)
+				{
+					if(arr[i].id == "leftMenuAdPart")
+					{
+						arr[i].parentNode.removeChild(arr[i]);
+						break;
+					}
+				}
+				newNode.style.position = "absolute";
+				newNode.style.top = t + 50 +"px";
+				newNode.style.left = document.getElementById("leftPart").offsetLeft + "px";
+			}
+		}
+		else
+		{
+			if(document.getElementById("leftMenuFloat"))
+			{
+				document.getElementById("leftMenuFloat").parentNode.removeChild(document.getElementById("leftMenuFloat"));
+			}
+		}
+	} 
+	
+	function closeAd(obj)
+	{
+		obj.parentNode.parentNode.removeChild(obj.parentNode);
+	}
+</script>	</head>
+
+	<body>
+		<div class="divHead">
+	<div class="divHeadContent">
+		<div class="divHeadContentLogo"><a href="/"><img href="/" src="../images/logo.png"/></a></div>
+		<div class="divHeadContentRight"><a href="http://weibo.com/tapinfinity" target="_blank"><img src="../images/sina.png"/></a></div>
+
+	</div>
+</div>
+<div class="divHeadSplitter">&nbsp;</div>
+<div id="topMenu" class="divHeadMenu">
+	<div class="divHeadMenuContent">
+		<a href="menu1lesson1.html">åˆè¯†Psè„šæœ¬</a>
+		<a href="menu2lesson1.html">æ–‡æ¡£æ“ä½œ</a>
+		<a href="menu3lesson1.html">å›¾åƒå¤„ç†</a>
+		<a href="menu4lesson1.html">ä½¿ç”¨å›¾å±‚</a>
+		<a href="menu5lesson1.html">ä½¿ç”¨é€‰åŒº</a>
+		<a href="menu6lesson1.html">é€šé“åŸºç¡€</a>
+		<a href="menu7lesson1.html">ç¥å¥‡æ»¤é•œ</a>
+		<a href="menu8lesson1.html">ç»¼åˆå®ä¾‹</a>
+		<a href="menu9lesson1.html">JSè„šæœ¬å…¥é—¨</a>
+	</div>
+</div>
+
+<div class="divMenuPath">
+	<div id="pageTitle" class="divMenuPathContent">
+		é¦–é¡µ > 
+	</div>
+</div>
+<script>
+//document.getElementById('contentTitle').innerHTML = document.title;
+
+var topMenu = document.getElementById('topMenu');
+var topMenuAs = topMenu.getElementsByTagName('a');
+for(var i=0; i<topMenuAs.length; i++)
+{
+	topMenuAs[i].className = ''; 
+}
+
+var mainTitle = "";
+var url = window.location.href;
+if(url.indexOf('menu1lesson') > -1)
+{
+	topMenuAs[0].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu1lesson1.html'>åˆè¯†Psè„šæœ¬</a>";
+}
+else if(url.indexOf('menu2lesson') > -1)
+{
+	topMenuAs[1].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu2lesson1.html'>æ–‡æ¡£æ“ä½œ</a>";
+}
+else if(url.indexOf('menu3lesson') > -1)
+{
+	topMenuAs[2].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu3lesson1.html'>å›¾åƒå¤„ç†</a>";
+}
+else if(url.indexOf('menu4lesson') > -1)
+{
+	topMenuAs[3].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu4lesson1.html'>ä½¿ç”¨å›¾å±‚</a>";
+}
+else if(url.indexOf('menu5lesson') > -1)
+{
+	topMenuAs[4].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu5lesson1.html'>ä½¿ç”¨é€‰åŒº</a>";
+}
+else if(url.indexOf('menu6lesson') > -1)
+{
+	topMenuAs[5].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu6lesson1.html'>é€šé“åŸºç¡€</a>";
+}
+else if(url.indexOf('menu7lesson') > -1)
+{
+	topMenuAs[6].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu7lesson1.html'>ç¥å¥‡æ»¤é•œ</a>";
+}
+else if(url.indexOf('menu8lesson') > -1)
+{
+	topMenuAs[7].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu8lesson1.html'>ç»¼åˆå®ä¾‹</a>";
+}
+else if(url.indexOf('menu9lesson') > -1)
+{
+	topMenuAs[8].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu9lesson1.html'>JSè„šæœ¬å…¥é—¨</a>";
+}
+
+document.getElementById('pageTitle').innerHTML = '<a href="/">é¦–é¡µ</a> > '+mainTitle+' > ' + document.title.split(' > ')[1];
+</script>		<div class="divBody">
+			<div class="divBodyContent">
+				<div id="leftPart" class="divBodyContentLeft">
+					<div id="leftMenu" class="menu">
+		<p class="title">ä½¿ç”¨é€‰åŒº</p>
+	<p>
+		<a href="menu5lesson1.html" title="åˆ›å»ºä¸€ä¸ªé€‰åŒº">åˆ›å»ºä¸€ä¸ªé€‰åŒº</a><br/>
+		<a href="menu5lesson2.html" title="åŒæ—¶åˆ›å»ºå¤šä¸ªé€‰åŒº">åŒæ—¶åˆ›å»ºå¤šä¸ªé€‰åŒº</a><br/>
+		<a href="menu5lesson3.html" title="å–æ¶ˆå½“å‰é€‰åŒº">å–æ¶ˆå½“å‰é€‰åŒº</a><br/>
+		<a href="menu5lesson4.html" title="æ¸…é™¤é€‰åŒºçš„å†…å®¹">æ¸…é™¤é€‰åŒºçš„å†…å®¹</a><br/>
+		<a href="menu5lesson5.html" title="åè½¬å½“å‰é€‰åŒº">åè½¬å½“å‰é€‰åŒº</a><br/>
+		<a href="menu5lesson6.html" title="ç¾½åŒ–å½“å‰é€‰åŒº">ç¾½åŒ–å½“å‰é€‰åŒº</a><br/>
+		<a href="menu5lesson7.html" title="å¹³æ»‘å½“å‰é€‰åŒº">å¹³æ»‘å½“å‰é€‰åŒº</a><br/>
+		<a href="menu5lesson8.html" title="æ‰©å¤§å½“å‰é€‰åŒº">æ‰©å¤§å½“å‰é€‰åŒº</a><br/>
+		<a href="menu5lesson9.html" title="æ”¹å˜å½“å‰é€‰åŒºå†…å®¹çš„å°ºå¯¸">æ”¹å˜å½“å‰é€‰åŒºå†…å®¹çš„å°ºå¯¸</a><br/>
+		<a href="menu5lesson10.html" title="æ”¹å˜å½“å‰é€‰åŒºçš„å°ºå¯¸">æ”¹å˜å½“å‰é€‰åŒºçš„å°ºå¯¸</a><br/>
+		<a href="menu5lesson11.html" title="é€šè¿‡Growå‘½ä»¤æ‰©å±•é€‰åŒº">é€šè¿‡Growå‘½ä»¤æ‰©å±•é€‰åŒº</a><br/>
+		<a href="menu5lesson12.html" title="é€‰å–ç›¸ä¼¼çš„é¢œè‰²">é€‰å–ç›¸ä¼¼çš„é¢œè‰²</a><br/>
+		<a href="menu5lesson13.html" title="ç§»åŠ¨å½“å‰é€‰åŒºçš„å†…å®¹">ç§»åŠ¨å½“å‰é€‰åŒºçš„å†…å®¹</a><br/>
+		<a href="menu5lesson14.html" title="ç§»åŠ¨å½“å‰é€‰åŒº">ç§»åŠ¨å½“å‰é€‰åŒº</a><br/>
+		<a href="menu5lesson15.html" title="æ—‹è½¬å½“å‰é€‰åŒºçš„å†…å®¹">æ—‹è½¬å½“å‰é€‰åŒºçš„å†…å®¹</a><br/>
+		<a href="menu5lesson16.html" title="æ—‹è½¬å½“å‰é€‰åŒº">æ—‹è½¬å½“å‰é€‰åŒº</a><br/>
+		<a href="menu5lesson17.html" title="è®¾ç½®é€‰åŒºçš„è¾¹æ¡†">è®¾ç½®é€‰åŒºçš„è¾¹æ¡†</a><br/>
+		<a href="menu5lesson18.html" title="ç»™é€‰åŒºæ·»åŠ æè¾¹æ•ˆæœ">ç»™é€‰åŒºæ·»åŠ æè¾¹æ•ˆæœ</a><br/>
+	</p>
+	</div>
+
+<div id="leftMenuAdPart">
+		<div class="leftSplitter"></div>
+	<div class="myAdsence">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- MinorArea1 -->
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:200px;height:200px"
+			 data-ad-client="ca-pub-5984872709769590"
+			 data-ad-slot="1771590269"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+<!--
+	<div class="leftSplitter"></div>
+	<div class="myAdsence">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		 MinorArea2 
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:200px;height:200px"
+			 data-ad-client="ca-pub-5984872709769590"
+			 data-ad-slot="3248323469"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+-->
+	</div>
+<script>
+//document.getElementById('contentTitle').innerHTML = document.title;
+
+var container = document.getElementById('leftMenu');
+var links = container.getElementsByTagName('a');
+
+for(var i=0; i<links.length;i++)
+{
+	if(links[i].innerText == document.title.split(' > ')[1])
+	{
+		links[i].setAttribute("class","currentLink");
+		break;
+	}
+}
+</script>				</div>
+
+				<!--ÄÚÈİ¿ªÊ¼-->
+				<div class="divBodyContentRight">
+					<div class="content">
+						<div><div class="contentTitle"><h2 id="articleTitle">¸øÑ¡ÇøÌí¼ÓÃè±ßĞ§¹û</h2></div><div class="contentShare"><!-- JiaThis Button BEGIN -->
+<div class="jiathis_style" style="margin-top:26px;">
+<span class="jiathis_txt">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a class="jiathis_button_kaixin001"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var at = document.getElementById('articleTitle').innerText;
+
+var jiathis_config={
+	url:window.location.href,
+	summary:"æ¨èå¤§å®¶ä¸€ä¸ªå¾ˆæ£’çš„ã€Photoshopè„šæœ¬ã€‘æ•™ç¨‹ç½‘ç«™ï¼šhttp://coolketang.com/ã€‚æˆ‘æ­£åœ¨è¿™é‡Œå­¦ä¹ Psè„šæœ¬ï¼Œè¿™é‡Œçš„è¯¾ç¨‹ä¸ä»…é€šä¿—æ˜“æ‡‚åœ°è®²è§£äº†Psè„šæœ¬çš„æ‰€æœ‰çŸ¥è¯†ç‚¹ï¼Œè€Œä¸”è¿˜æœ‰å¤§é‡çš„Psè„šæœ¬ç»¼åˆå®ä¾‹ï¼",
+	title:"#é…·è¯¾å ‚Photoshopè„šæœ¬ - "+at+"#",
+	shortUrl:false,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END --></div></div>
+						<hr/><div class="adCloseButtonContainer"><div class="adCloseButton" onclick="closeAd(this)">X</div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+	 style="display:inline-block;width:728px;height:90px"
+	 data-ad-client="ca-pub-5984872709769590"
+	 data-ad-slot="7163282668"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+						<div>
+							<p>±¾½Ú½«ÑİÊ¾ÈçºÎÊ¹ÓÃ½Å±¾£¬¸øÑ¡ÇøÌí¼ÓÃè±ßĞ§¹û¡£Ê×ÏÈ´´½¨Ò»¸ö¿Õ°×µÄ½Å±¾ÎÄµµ£¬²¢±£´æÔÚÓ²ÅÌÉÏÄ³¸öÎ»ÖÃ¡£</p>
+					<p>Ê×ÏÈ´´½¨Ò»¸ö¿Õ°×µÄ½Å±¾ÎÄµµ£¬²¢±£´æÔÚÓ²ÅÌÉÏÄ³¸öÎ»ÖÃ¡£</p>
+					<p>½Ó×ÅÊäÈë½Å±¾´úÂë£º</p>
+<pre>//¶¨ÒåÒ»¸ö±äÁ¿[region]£¬±íÊ¾Ò»¶¨·¶Î§µÄÇøÓò¡£ËüµÄÖµÊÇËÄ¸öµãµÄ×ø±ê¡£
+var region = [[50,50],[150,50],[150,150],[50,150]];
+
+//¶¨ÒåÒ»¸ö±äÁ¿[type]£¬±íÊ¾Ñ¡ÔñµÄÀàĞÍ¡£µ±Ç°Ê¹ÓÃµÄÊÇÄ¬ÈÏÑ¡Ïî¼´Ìæ»»Ö®Ç°µÄÑ¡Çø(Èç¹ûÓĞµÄ»°)¡£
+var type = SelectionType.REPLACE;
+
+//¶¨ÒåÒ»¸ö±äÁ¿[feather]£¬±íÊ¾¹¹½¨Ñ¡ÇøÊ±µÄÓğ»¯Öµ¡£
+var feather = 0;
+
+//¶¨ÒåÒ»¸ö±äÁ¿[antiAlias]£¬±íÊ¾¹¹½¨Ñ¡ÇøÊ±ÊÇ·ñ¿¹¾â³İ¡£
+var antiAlias = true;
+
+//Í¨¹ıµ÷ÓÃ[selection]¶ÔÏóµÄ[select]·½·¨£¬²¢´«ÈëÖ®Ç°ÉèÖÃºÃµÄ¸÷Ïî²ÎÊı£¬À´ÔÚµ±Ç°ÎÄµµ¹¹½¨Ò»¸öÑ¡Çø¡£
+app.activeDocument.selection.select(region, type, feather, antiAlias);
+
+//¶¨ÒåÒ»¸ö±äÁ¿[strokeColor]£¬±íÊ¾Ãè±ßµÄÑÕÉ«¡£
+var strokeColor = app.foregroundColor;
+
+//¶¨ÒåÒ»¸ö±äÁ¿[width]£¬±íÊ¾Ãè±ßµÄ¿í¶È¡£
+var width = 5;
+
+//¶¨ÒåÒ»¸ö±äÁ¿[location]£¬±íÊ¾Ãè±ßµÄÎ»ÖÃ£¬¼´ÔÚÑ¡ÇøÍâ²¿½øĞĞÃè±ß¡£
+var location = StrokeLocation.OUTSIDE;
+
+//¶¨ÒåÒ»¸ö±äÁ¿[mode]£¬±íÊ¾Ãè±ßµÄÑÕÉ«»ìºÏÄ£Ê½£¬ÕâÀï²ÉÓÃÕı³£µÄÑÕÉ«»ìºÏÄ£Ê½¡£
+var mode = ColorBlendMode.NORMAL;
+
+//¶¨ÒåÒ»¸ö±äÁ¿[opacity]£¬±íÊ¾Ãè±ßµÄÍ¸Ã÷¶È¡£
+var opacity = 100;
+
+//¶¨ÒåÒ»¸ö±äÁ¿[preserveTransparency]£¬±íÊ¾Ãè±ßÊÇ·ñ±£ÁôÍ¸Ã÷¶È¡£
+var preserveTransparency = true;
+
+//Í¨¹ıµ÷ÓÃ[selection]¶ÔÏóµÄ[stroke]·½·¨£¬²¢´«ÈëÖ®Ç°ÉèÖÃºÃµÄ¸÷Ïî²ÎÊı£¬À´½øĞĞÃè±ß¡£
+app.activeDocument.selection.stroke(strokeColor, width, location, mode, opacity, preserveTransparency);
+
+//Í¨¹ıµ÷ÓÃ[selection]¶ÔÏóµÄ[fill]·½·¨£¬¸øµ±Ç°Ñ¡ÇøÌî³äÏµÍ³µÄ±³¾°É«¡£
+app.activeDocument.selection.fill(app.foregroundColor);
+</pre>
+					<p><img src="../screens/menu5lesson18_15.png" width="760px"/></p>
+					<p>ÎÒÃÇµÄ½Å±¾ÒÑ¾­±àĞ´Íê³É£¬°ÑËü±£´æÏÂÀ´¡£</p>
+					<p>È»ºóÇĞ»»µ½Photoshop¡£</p>
+					<p><img src="../screens/menu5lesson18_16.png" width="760px"/></p>
+					<p>½Ó×ÅÒÀ´Îµã»÷[ÎÄ¼ş] > [½Å±¾] > [ä¯ÀÀ]£¬´ò¿ª¸Õ¸Õ±£´æµÄ½Å±¾ÎÄ¼ş¡£</p>
+					<p><img src="../screens/menu5lesson18_17.png" width="760px"/></p>
+					<p>ÔÚµ¯³öµÄ[ÔØÈë]´°¿ÚÖĞ£¬Ö±½ÓË«»÷½Å±¾Ãû³Æ£¬Photoshop½«Ö±½Óµ÷ÓÃ²¢Ö´ĞĞ¸Ã½Å±¾¡£</p>
+					<p>ÔÚµ¯³öµÄ[Ãè±ß]´°¿ÚÖĞ£¬µã»÷[È·¶¨]°´Å¥£¬È·ÈÏÃè±ßÉèÖÃ¡£</p>
+					<p><img src="../screens/menu5lesson18_18.png" width="760px"/></p>
+					<p>ÏÂÍ¼ÎªÖ´ĞĞÍê½Å±¾ºóµÄÍ¼Ïñ¡£</p>
+					<p><img src="../screens/menu5lesson18_19.png" width="760px"/></p>
+
+						</div>
+					</div>
+				</div>
+				<!--ÄÚÈİ½áÊø-->
+			</div>
+		</div>
+		
+		<!--µ×²¿¿ªÊ¼-->
+		<div class="divFoot">
+	<div class="divFootContent">
+		<br/>
+		é…·è¯¾å ‚ æä¾›çš„å†…å®¹ä»…ç”¨äºåŸ¹è®­ã€‚æˆ‘ä»¬ä¸ä¿è¯å†…å®¹çš„æ­£ç¡®æ€§ã€‚
+		é€šè¿‡ä½¿ç”¨æœ¬ç«™å†…å®¹éšä¹‹è€Œæ¥çš„é£é™©ä¸æœ¬ç«™æ— å…³ã€‚
+		é…·è¯¾å ‚ç®€ä½“ä¸­æ–‡ç‰ˆçš„æ‰€æœ‰å†…å®¹ä»…ä¾›æµ‹è¯•ï¼Œå¯¹ä»»ä½•æ³•å¾‹é—®é¢˜åŠé£é™©ä¸æ‰¿æ‹…ä»»ä½•è´£ä»»ã€‚
+		å½“ä½¿ç”¨æœ¬ç«™æ—¶ï¼Œä»£è¡¨æ‚¨å·²æ¥å—äº†æœ¬ç«™çš„ä½¿ç”¨æ¡æ¬¾å’Œéšç§æ¡æ¬¾ã€‚
+		ç‰ˆæƒæ‰€æœ‰ï¼Œä¿ç•™ä¸€åˆ‡æƒåˆ©ã€‚ 
+		<br/>èµåŠ©å•†ï¼š<a href="http://weibo.com/tapinfinity" target="_blank">TapInfinity</a>
+		<br/>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253561512'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.html%3Fid%3D1253561512%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+
+	</div>
+</div>		<!--µ×²¿½áÊø-->
+
+	</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Photoshop脚本 > 剪切一个图层</title>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta name="robots" content="all">
+<meta name="author" content="http://weibo.com/tapinfinity">
+<meta name="keywords" content="photoshop,photoshop脚本,ps,ps脚本,photoshop教程,ps教程,photoshop视频,ps视频,photoshop动作,ps动作,photoshop批处理,ps批处理" />
+<meta name="description" content="本站是全球唯一一个向您详细讲解Photoshop脚本的站点。本站超酷的教程帮助您快速上手Photohsop脚本！学会Photoshop脚本，可以大幅度提高您的工作效率！" />
+<link rel="stylesheet" type="text/css" href="../source/css.css">
+<script>
+	window.onscroll = function()
+	{ 
+		var t = document.documentElement.scrollTop || document.body.scrollTop;  
+		
+		if( t >= 62 ) 
+		{ 
+			//alert(t);
+			if(document.getElementById("topMenuFloat"))
+			{
+				document.getElementById("topMenuFloat").style.top = t +"px";
+			}
+			else
+			{
+				var newNode = document.getElementById("topMenu").cloneNode(true);
+				newNode.id = "topMenuFloat";
+				document.body.appendChild(newNode);
+				newNode.style.position = "absolute";
+				newNode.style.top = t +"px";
+			}
+			//document.getElementById("topMenu").style.display="block";
+			//document.getElementById("topMenu").style.top = t +"px";
+		} 
+		else 
+		{ 
+			if(document.getElementById("topMenuFloat"))
+			{
+				document.getElementById("topMenuFloat").parentNode.removeChild(document.getElementById("topMenuFloat"));
+			}
+		} 
+
+		if( t >= (152-50) ) 
+		{
+			if(document.getElementById("leftMenuFloat"))
+			{
+				document.getElementById("leftMenuFloat").style.top = t + 50 +"px";
+			}
+			else
+			{
+				var newNode = document.getElementById("leftPart").cloneNode(true);
+				
+				newNode.id = "leftMenuFloat";
+				document.body.appendChild(newNode);
+
+				var arr = document.getElementById('leftMenuFloat').childNodes;
+				for(var i=0; i<arr.length; i++)
+				{
+					if(arr[i].id == "leftMenuAdPart")
+					{
+						arr[i].parentNode.removeChild(arr[i]);
+						break;
+					}
+				}
+				newNode.style.position = "absolute";
+				newNode.style.top = t + 50 +"px";
+				newNode.style.left = document.getElementById("leftPart").offsetLeft + "px";
+			}
+		}
+		else
+		{
+			if(document.getElementById("leftMenuFloat"))
+			{
+				document.getElementById("leftMenuFloat").parentNode.removeChild(document.getElementById("leftMenuFloat"));
+			}
+		}
+	} 
+	
+	function closeAd(obj)
+	{
+		obj.parentNode.parentNode.removeChild(obj.parentNode);
+	}
+</script>	</head>
+
+	<body>
+		<div class="divHead">
+	<div class="divHeadContent">
+		<div class="divHeadContentLogo"><a href="/"><img href="/" src="../images/logo.png"/></a></div>
+		<div class="divHeadContentRight"><a href="http://weibo.com/tapinfinity" target="_blank"><img src="../images/sina.png"/></a></div>
+
+	</div>
+</div>
+<div class="divHeadSplitter">&nbsp;</div>
+<div id="topMenu" class="divHeadMenu">
+	<div class="divHeadMenuContent">
+		<a href="menu1lesson1.html">初识Ps脚本</a>
+		<a href="menu2lesson1.html">文档操作</a>
+		<a href="menu3lesson1.html">图像处理</a>
+		<a href="menu4lesson1.html">使用图层</a>
+		<a href="menu5lesson1.html">使用选区</a>
+		<a href="menu6lesson1.html">通道基础</a>
+		<a href="menu7lesson1.html">神奇滤镜</a>
+		<a href="menu8lesson1.html">综合实例</a>
+		<a href="menu9lesson1.html">JS脚本入门</a>
+	</div>
+</div>
+
+<div class="divMenuPath">
+	<div id="pageTitle" class="divMenuPathContent">
+		首页 > 
+	</div>
+</div>
+<script>
+//document.getElementById('contentTitle').innerHTML = document.title;
+
+var topMenu = document.getElementById('topMenu');
+var topMenuAs = topMenu.getElementsByTagName('a');
+for(var i=0; i<topMenuAs.length; i++)
+{
+	topMenuAs[i].className = ''; 
+}
+
+var mainTitle = "";
+var url = window.location.href;
+if(url.indexOf('menu1lesson') > -1)
+{
+	topMenuAs[0].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu1lesson1.html'>初识Ps脚本</a>";
+}
+else if(url.indexOf('menu2lesson') > -1)
+{
+	topMenuAs[1].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu2lesson1.html'>文档操作</a>";
+}
+else if(url.indexOf('menu3lesson') > -1)
+{
+	topMenuAs[2].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu3lesson1.html'>图像处理</a>";
+}
+else if(url.indexOf('menu4lesson') > -1)
+{
+	topMenuAs[3].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu4lesson1.html'>使用图层</a>";
+}
+else if(url.indexOf('menu5lesson') > -1)
+{
+	topMenuAs[4].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu5lesson1.html'>使用选区</a>";
+}
+else if(url.indexOf('menu6lesson') > -1)
+{
+	topMenuAs[5].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu6lesson1.html'>通道基础</a>";
+}
+else if(url.indexOf('menu7lesson') > -1)
+{
+	topMenuAs[6].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu7lesson1.html'>神奇滤镜</a>";
+}
+else if(url.indexOf('menu8lesson') > -1)
+{
+	topMenuAs[7].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu8lesson1.html'>综合实例</a>";
+}
+else if(url.indexOf('menu9lesson') > -1)
+{
+	topMenuAs[8].className = 'active'; 
+	mainTitle = "<a href='/psscript/menu9lesson1.html'>JS脚本入门</a>";
+}
+
+document.getElementById('pageTitle').innerHTML = '<a href="/">首页</a> > '+mainTitle+' > ' + document.title.split(' > ')[1];
+</script>		<div class="divBody">
+			<div class="divBodyContent">
+				<div id="leftPart" class="divBodyContentLeft">
+					<div id="leftMenu" class="menu">
+		<p class="title">使用图层</p>
+	<p>
+		<a href="menu4lesson1.html" title="添加新图层">添加新图层</a><br/>
+		<a href="menu4lesson2.html" title="根据图层名称查找图层">根据图层名称查找图层</a><br/>
+		<a href="menu4lesson3.html" title="删除当前图层">删除当前图层</a><br/>
+		<a href="menu4lesson4.html" title="通过拷贝创建一个图层">通过拷贝创建一个图层</a><br/>
+		<a href="menu4lesson5.html" title="剪切一个图层">剪切一个图层</a><br/>
+		<a href="menu4lesson6.html" title="复制图层并改变图层顺序">复制图层并改变图层顺序</a><br/>
+		<a href="menu4lesson7.html" title="调整图层的顺序">调整图层的顺序</a><br/>
+		<a href="menu4lesson8.html" title="移动图层的位置">移动图层的位置</a><br/>
+		<a href="menu4lesson9.html" title="图层的旋转">图层的旋转</a><br/>
+		<a href="menu4lesson10.html" title="图层的缩放">图层的缩放</a><br/>
+		<a href="menu4lesson11.html" title="图层的链接">图层的链接</a><br/>
+		<a href="menu4lesson12.html" title="图层的栅格化">图层的栅格化</a><br/>
+		<a href="menu4lesson13.html" title="合并可见图层">合并可见图层</a><br/>
+		<a href="menu4lesson14.html" title="合并链接图层">合并链接图层</a><br/>
+		<a href="menu4lesson15.html" title="合并所有图层">合并所有图层</a><br/>
+		<a href="menu4lesson16.html" title="锁定图层组所有图层">锁定图层组所有图层</a><br/>
+		<a href="menu4lesson17.html" title="查看当前图层的锁定状态">查看当前图层的锁定状态</a><br/>
+	</p>
+	</div>
+
+<div id="leftMenuAdPart">
+		<div class="leftSplitter"></div>
+	<div class="myAdsence">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- MinorArea1 -->
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:200px;height:200px"
+			 data-ad-client="ca-pub-5984872709769590"
+			 data-ad-slot="1771590269"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+<!--
+	<div class="leftSplitter"></div>
+	<div class="myAdsence">
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		 MinorArea2 
+		<ins class="adsbygoogle"
+			 style="display:inline-block;width:200px;height:200px"
+			 data-ad-client="ca-pub-5984872709769590"
+			 data-ad-slot="3248323469"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
+-->
+	</div>
+<script>
+//document.getElementById('contentTitle').innerHTML = document.title;
+
+var container = document.getElementById('leftMenu');
+var links = container.getElementsByTagName('a');
+
+for(var i=0; i<links.length;i++)
+{
+	if(links[i].innerText == document.title.split(' > ')[1])
+	{
+		links[i].setAttribute("class","currentLink");
+		break;
+	}
+}
+</script>				</div>
+
+				<!--内容开始-->
+				<div class="divBodyContentRight">
+					<div class="content">
+						<div><div class="contentTitle"><h2 id="articleTitle">剪切一个图层</h2></div><div class="contentShare"><!-- JiaThis Button BEGIN -->
+<div class="jiathis_style" style="margin-top:26px;">
+<span class="jiathis_txt">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a class="jiathis_button_kaixin001"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var at = document.getElementById('articleTitle').innerText;
+
+var jiathis_config={
+	url:window.location.href,
+	summary:"推荐大家一个很棒的【Photoshop脚本】教程网站：http://coolketang.com/。我正在这里学习Ps脚本，这里的课程不仅通俗易懂地讲解了Ps脚本的所有知识点，而且还有大量的Ps脚本综合实例！",
+	title:"#酷课堂Photoshop脚本 - "+at+"#",
+	shortUrl:false,
+	hideMore:false
+}
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END --></div></div>
+						<hr/><div class="adCloseButtonContainer"><div class="adCloseButton" onclick="closeAd(this)">X</div><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+	 style="display:inline-block;width:728px;height:90px"
+	 data-ad-client="ca-pub-5984872709769590"
+	 data-ad-slot="7163282668"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+						<div>
+							<p>本节将演示如何使用脚本，通过剪切创建一个拷贝的图层。首先创建一个空白的脚本文档，并保存在硬盘上某个位置。</p>
+					<p>首先创建一个空白的脚本文档，并保存在硬盘上某个位置。</p>
+					<p>接着输入脚本代码：</p>
+<pre>//定义一个变量[layer]，用来表示Photoshop的当前图层。
+var layer = app.activeDocument.activeLayer;
+
+//调用[layer]对象的[cut]方法，将该图层剪切到内存中。
+layer.cut();
+
+//调用[document]对象的[paste]方法，将内存中的拷贝，粘贴到当前文档。
+app.activeDocument.paste();
+</pre>
+					<p><img src="../screens/menu4lesson5_5.png" width="760px"/></p>
+					<p>我们的脚本已经编写完成，把它保存下来。</p>
+					<p>然后切换到Photoshop。</p>
+					<p><img src="../screens/menu4lesson5_6.png" width="760px"/></p>
+					<p>接着依次点击[文件] > [脚本] > [浏览]，打开刚刚保存的脚本文件。</p>
+					<p><img src="../screens/menu4lesson5_7.png" width="760px"/></p>
+					<p>在弹出的[载入]窗口中，直接双击脚本名称，Photoshop将直接调用并执行该脚本。</p>
+					<p>下面的Gif动画为脚本执行的过程，动画有点大，如果网速慢，请耐心等待下载。</p>
+					<p><img src="../screens/menu4lesson5.gif" width="760px"/></p>
+							<p></p>
+
+						</div>
+					</div>
+				</div>
+				<!--内容结束-->
+			</div>
+		</div>
+		
+		<!--底部开始-->
+		<div class="divFoot">
+	<div class="divFootContent">
+		<br/>
+		酷课堂 提供的内容仅用于培训。我们不保证内容的正确性。
+		通过使用本站内容随之而来的风险与本站无关。
+		酷课堂简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
+		当使用本站时，代表您已接受了本站的使用条款和隐私条款。
+		版权所有，保留一切权利。 
+		<br/>赞助商：<a href="http://weibo.com/tapinfinity" target="_blank">TapInfinity</a>
+		<br/>
+		<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1253561512'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/stat.html%3Fid%3D1253561512%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+
+	</div>
+</div>		<!--底部结束-->
+
+	</body>
+</html>
